@@ -1,0 +1,28 @@
+{
+    "name": "cyp-course2-1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "headTest": "node_modules\\.bin\\cypress run --headed",
+        "chromeTest": "node_modules\\.bin\\cypress run --browser chrome --parallel"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^18.0.1",
+        "@cypress/browserify-preprocessor": "latest",
+        "cypress": "^12.14.0",
+        "cypress-cucumber-preprocessor": "^4.3.1",
+        "cypress-iframe": "^1.0.1"
+    },
+    "devDependencies": {
+        "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true,
+        "step_definitions": "cypress/e2e/ecommerce"
+    }
+}
